@@ -1,0 +1,66 @@
+/* styles/main.css */
+
+/* General Styles */
+body {
+    background-color: #000000;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 125vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+}
+
+#mindmap-container {
+    position: relative;
+    width: 90vw; /* Flexible width */
+    height: 90vh; /* Flexible height */
+    margin-top: 2.5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Group Name Input Styles */
+#group-name-container {
+    margin-bottom: 40px;
+}
+
+#group-name-input {
+    width: 50%; /* Changed to percentage for responsiveness */
+    height: 2rem; /* Responsive height */
+    border: 2px solid #40FE5E;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    color: #40FE5E;
+    text-align: center;
+    font-size: 1rem; /* Use rem for responsive fonts */
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#group-name-input::placeholder {
+    color: #40FE5E;
+}
+
+/* Reset Button Styles */
+.reset-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #40FE5E;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem; /* Use rem for responsive fonts */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+}
+
+.reset-btn:hover {
+    background-color: #35e14d;
+}

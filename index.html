@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Added viewport meta tag -->
+    <title>Dynamic Mind Map</title>
+    <!-- Link to CSS files -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/mindmap.css">
+    <link rel="stylesheet" href="styles/menu.css">
+    <link rel="stylesheet" href="styles/responsive.css"> <!-- New responsive CSS -->
+</head>
+<body>
+    <div id="mindmap-container">
+        <!-- Pop-up Menu Trigger (formerly the color circle) -->
+        <div id="color-menu-trigger">
+            <div id="color-circle"></div>
+        </div>
+
+        <!-- Pop-up Menu -->
+        <div id="popup-menu" class="hidden">
+            <button id="change-color-btn">Change Color</button>
+            <button id="close-menu-btn">Close</button>
+        </div>
+
+        <!-- Group Name Input -->
+        <div id="group-name-container">
+            <input type="text" id="group-name-input" placeholder="Group Name">
+        </div>
+
+        <!-- Color Selection Menu (Initially Hidden) -->
+        <div id="color-menu" class="hidden">
+            <div class="color-swatch" data-color="#40FE5E" style="background-color: #40FE5E;"></div>
+            <div class="color-swatch" data-color="#FF0000" style="background-color: #FF0000;"></div>
+            <div class="color-swatch" data-color="#0000FF" style="background-color: #0000FF;"></div>
+            <div class="color-swatch" data-color="#FFFF00" style="background-color: #FFFF00;"></div>
+            <div class="color-swatch" data-color="#F46CA7" style="background-color: #F46CA7;"></div>
+            <div class="color-swatch" data-color="#8C52FF" style="background-color: #8C52FF;"></div>
+            <div class="color-swatch" data-color="#FF914D" style="background-color: #FF914D;"></div>
+        </div>
+
+        <!-- Central Node -->
+        <div id="central-node" class="node">
+            <textarea placeholder="Begin typing a thought..."></textarea>
+            <!-- Plus Icons -->
+            <button id="add-below-btn" class="add-btn">+</button>
+            <button id="add-left-btn" class="add-btn">+</button>
+            <button id="add-right-btn" class="add-btn">+</button>
+        </div>
+
+        <!-- Button to reset and create a new node group -->
+        <button id="reset-button" class="reset-btn">Create New Node Group</button>
+    </div>
+
+    <!-- Link to JavaScript files -->
+    <script src="scripts/mindmap.js"></script>
+    <script src="scripts/menu.js"></script>
+</body>
+</html>

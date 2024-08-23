@@ -1,0 +1,110 @@
+/* styles/mindmap.css */
+
+/* Central Node Styles */
+#central-node {
+    position: relative;
+    width: 240px;
+    min-height: 140px;
+    border: 4px solid #40FE5E;
+    border-radius: 15px;
+    background-color: #000000;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* Text Area Styling (Applies to all nodes) */
+textarea {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #40FE5E;
+    font-size: 1rem; /* Use rem for responsive fonts */
+    resize: none;
+    text-align: center;
+    overflow: hidden;
+    line-height: 1.5;
+}
+
+/* Plus Button Positioning */
+#add-below-btn,
+#add-left-btn,
+#add-right-btn {
+    width: 40px; /* Fixed size to keep them circular */
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #40FE5E;
+    background-color: transparent;
+    color: #40FE5E;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#add-below-btn {
+    position: absolute;
+    bottom: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 20px #40FE5E;
+    margin-top: 20px;
+}
+
+#add-left-btn {
+    position: absolute;
+    left: -70px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#add-right-btn {
+    position: absolute;
+    right: -70px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Node Styling (Applies to dynamically added nodes) */
+.node {
+    position: absolute;
+    width: 180px;
+    min-height: 100px;
+    border: 3px solid #40FE5E;
+    border-radius: 10px;
+    background-color: #000000;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Connection Lines */
+.connection-line {
+    position: absolute;
+    height: 2px;
+    background-color: #40FE5E;
+}
+
+/* Neon flash animation */
+@keyframes neon-flash {
+    0%, 100% {
+        box-shadow: 0 0 20px currentColor, 0 0 30px currentColor, 0 0 40px currentColor, 0 0 50px currentColor;
+    }
+    50% {
+        box-shadow: 0 0 30px currentColor, 0 0 40px currentColor, 0 0 50px currentColor, 0 0 60px currentColor;
+    }
+}
+
+.neon-flash {
+    animation: neon-flash 0.5s ease-in-out;
+}

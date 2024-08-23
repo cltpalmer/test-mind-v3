@@ -1,0 +1,83 @@
+/* styles/menu.css */
+
+/* Small Green Circle for Color Menu Trigger */
+#color-menu-trigger {
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+#color-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #40FE5E;
+    border: 2px solid #40FE5E;
+}
+
+/* Pop-up Menu Styles */
+#popup-menu {
+    background-color: transparent;
+    border: 2px solid #40FE5E;
+    border-radius: 15px;
+    padding: 10px;
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    top: 30px; /* Adjusted position to align with the circle */
+    z-index: 9999; /* High z-index to float above all other elements */
+}
+
+#popup-menu button {
+    background-color: #000000; /* Default background color before hover */
+    border: 2px solid #40FE5E;
+    border-radius: 15px;
+    color: #40FE5E;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 0 5px #40FE5E;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+#popup-menu button:hover {
+    background-color: #40FE5E; /* Background color on hover */
+    color: #000000; /* Text color on hover */
+    box-shadow: 0 0 15px #40FE5E;
+}
+
+/* Hide element */
+.hidden {
+    display: none;
+}
+
+/* Styles for the color swatch menu */
+#color-menu {
+    background-color: #000000;
+    border: 2px solid #40FE5E;
+    border-radius: 10px;
+    padding: 10px;
+    display: none; /* Initially hidden */
+    flex-wrap: wrap; /* Allow wrapping for rows */
+    gap: 10px;
+    position: absolute;
+    z-index: 1000; /* Ensure it appears above other elements */
+    width: 250px; /* Adjust width to fit four swatches in a row */
+}
+
+.color-swatch {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 5px #40FE5E;
+}
+
+.color-swatch:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px #40FE5E;
+}

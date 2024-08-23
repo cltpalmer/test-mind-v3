@@ -2,13 +2,13 @@
 
 /* Small Green Circle for Color Menu Trigger */
 #color-menu-trigger {
-    margin-bottom: 15px;
+    margin-bottom: 1.5vh;
     cursor: pointer;
 }
 
 #color-circle {
-    width: 20px;
-    height: 20px;
+    width: 2.5vw;
+    height: 2.5vw;
     border-radius: 50%;
     background-color: #40FE5E;
     border: 2px solid #40FE5E;
@@ -19,34 +19,34 @@
     background-color: transparent;
     border: 2px solid #40FE5E;
     border-radius: 15px;
-    padding: 10px;
-    display: none; /* Initially hidden */
+    padding: 1.5vh 1vw;
+    display: none;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 1vh;
     position: absolute;
-    top: 30px; /* Adjusted position to align with the circle */
-    z-index: 9999; /* High z-index to float above all other elements */
+    top: 3vh;
+    z-index: 9999;
 }
 
 #popup-menu button {
-    background-color: #000000; /* Default background color before hover */
+    background-color: #000000;
     border: 2px solid #40FE5E;
     border-radius: 15px;
     color: #40FE5E;
-    width: 100px;
-    height: 30px;
+    width: 10vw;
+    height: 3vh;
     text-align: center;
-    font-size: 14px;
+    font-size: 1vw;
     cursor: pointer;
-    box-shadow: 0 0 5px #40FE5E;
+    box-shadow: 0 0 0.5vw #40FE5E;
     transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
 }
 
 #popup-menu button:hover {
-    background-color: #40FE5E; /* Background color on hover */
-    color: #000000; /* Text color on hover */
-    box-shadow: 0 0 15px #40FE5E;
+    background-color: #40FE5E;
+    color: #000000;
+    box-shadow: 0 0 1.5vw #40FE5E;
 }
 
 /* Hide element */
@@ -59,25 +59,25 @@
     background-color: #000000;
     border: 2px solid #40FE5E;
     border-radius: 10px;
-    padding: 10px;
-    display: none; /* Initially hidden */
-    flex-wrap: wrap; /* Allow wrapping for rows */
-    gap: 10px;
+    padding: 1vh;
+    display: none;
+    flex-wrap: wrap;
+    gap: 1vw;
     position: absolute;
-    z-index: 1000; /* Ensure it appears above other elements */
-    width: 250px; /* Adjust width to fit four swatches in a row */
+    z-index: 1000;
+    width: 25vw;
 }
 
 .color-swatch {
-    width: 30px;
-    height: 30px;
+    width: 3vw;
+    height: 3vw;
     border-radius: 50%;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 0 5px #40FE5E;
+    box-shadow: 0 0 0.5vw #40FE5E;
 }
 
 .color-swatch:hover {
     transform: scale(1.2);
-    box-shadow: 0 0 15px #40FE5E;
+    box-shadow: 0 0 1.5vw #40FE5E;
 }

@@ -60,16 +60,71 @@ function updateColor(newColor) {
             }
             if (element.classList.contains('add-btn')) {
                 element.style.borderColor = newColor;
-                element.style.boxShadow = `0 0 2vw ${newColor}`;
+                element.style.boxShadow = `0 0 10px ${newColor}`;
                 element.style.color = newColor;
             }
         });
         document.getElementById('color-circle').style.backgroundColor = newColor;
         document.getElementById('color-circle').style.borderColor = newColor;
         const centralNodeBottomLogo = document.getElementById('add-below-btn');
-        centralNodeBottomLogo.style.boxShadow = `0 0 2vw ${newColor}`;
+        centralNodeBottomLogo.style.boxShadow = `0 0 10px ${newColor}`;
         const resetButton = document.getElementById('reset-button');
         resetButton.style.backgroundColor = newColor;
         resetButton.style.color = '#000000';
     }, 500); 
 }
+
+// Function to check space and display/hide add buttons accordingly
+function updateAddButtonsVisibility() {
+    const container = document.getElementById('mindmap-container');
+    const centralNode = document.getElementById('central-node');
+    const addButtons = {
+        below: document.getElementById('add-below-btn'),
+        left: document.getElementById('add-left-btn'),
+        right: document.getElementById('add-right-btn')
+    };
+
+    const nodeRect = centralNode.getBoundingClientRect();
+    const containerRect = container.getBoundingClientRect();
+
+    // Check if there's enough space below
+    const hasSpaceBelow = (nodeRect.bottom + nodeRect.height) < containerRect.bottom;
+    const hasSpaceLeft = (nodeRect.left - nodeRect.width) > containerRect.left;
+    const hasSpaceRight = (nodeRect.right + nodeRect.width) < containerRect.right;
+
+    // Show or hide buttons based on available space
+    addButtons.below.style.display = hasSpaceBelow ? 'flex' : 'none';
+    addButtons.left.style.display = hasSpaceLeft ? 'flex' : 'none';
+    addButtons.right.style.display = hasSpaceRight ? 'flex' : 'none';
+}
+
+// Function to dynamically adjust margins around the plus buttons
+function updateAddButtonsMargins() {
+    const centralNode = document.getElementById('central-node');
+    const addButtons = document.querySelectorAll('.add-btn');
+
+    // Calculate the dynamic margin based on the central node's width
+    const marginValue = Math.max(centralNode.offsetWidth * 0.1, 10); // Minimum 10px margin
+
+    // Apply the calculated margin
+    addButtons.forEach(button => {
+        button.style.margin = `${marginValue}px`;
+    });
+}
+
+// Call the functions on resize and load
+window.addEventListener('resize', () => {
+    updateAddButtonsVisibility();
+    updateAddButtonsMargins();
+});
+
+window.addEventListener('load', () => {
+    updateAddButtonsVisibility();
+    updateAddButtonsMargins();
+});
+
+// Call the function when a new node is added to recalculate space
+document.getElementById('reset-button').addEventListener('click', () => {
+    updateAddButtonsVisibility();
+    updateAddButtonsMargins();
+});

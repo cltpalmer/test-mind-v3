@@ -35,8 +35,8 @@ textarea {
 #add-below-btn,
 #add-left-btn,
 #add-right-btn {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     border: 2px solid #40FE5E;
     background-color: transparent;
@@ -51,7 +51,7 @@ textarea {
 
 #add-below-btn {
     position: absolute;
-    bottom: -35px;
+    bottom: -50px; /* Adjusted to be further below the node */
     left: 50%;
     transform: translateX(-50%);
     box-shadow: 0 0 10px #40FE5E;
@@ -59,14 +59,14 @@ textarea {
 
 #add-left-btn {
     position: absolute;
-    left: -35px;
+    left: -50px; /* Adjusted to be further to the left */
     top: 50%;
     transform: translateY(-50%);
 }
 
 #add-right-btn {
     position: absolute;
-    right: -35px;
+    right: -50px; /* Adjusted to be further to the right */
     top: 50%;
     transform: translateY(-50%);
 }

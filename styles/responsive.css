@@ -34,19 +34,19 @@
     }
 
     #add-below-btn {
-        bottom: -30px; /* Centered below */
+        bottom: -20px; /* Adjust for smaller screens */
         left: 50%;
         transform: translateX(-50%);
     }
 
     #add-left-btn {
-        left: -40px; /* Adjusted for mobile */
+        left: -35px; /* Adjust for smaller screens */
         top: 50%;
         transform: translateY(-50%);
     }
 
     #add-right-btn {
-        right: -40px; /* Adjusted for mobile */
+        right: -35px; /* Adjust for smaller screens */
         top: 50%;
         transform: translateY(-50%);
     }

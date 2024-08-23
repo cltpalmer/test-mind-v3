@@ -14,6 +14,7 @@
     align-items: center;
     text-align: center;
     transition: all 0.3s ease;
+    margin-bottom: 40px; /* Consistent margin for spacing */
 }
 
 /* Text Area Styling (Applies to all nodes) */
@@ -61,14 +62,14 @@ textarea {
 /* Position the plus buttons to the left and right */
 #add-left-btn {
     position: absolute;
-    left: -50px; /* Adjust this value as needed */
+    left: -50px; /* Adjust this value for spacing */
     top: 50%;
     transform: translateY(-50%);
 }
 
 #add-right-btn {
     position: absolute;
-    right: -50px; /* Adjust this value as needed */
+    right: -50px; /* Adjust this value for spacing */
     top: 50%;
     transform: translateY(-50%);
 }
@@ -96,7 +97,7 @@ textarea {
     background-color: #40FE5E;
 }
 
-/* Neon flash animation */
+/* Neon Flash Animation */
 @keyframes neon-flash {
     0%, 100% {
         box-shadow: 0 0 20px currentColor, 0 0 30px currentColor, 0 0 40px currentColor, 0 0 50px currentColor;

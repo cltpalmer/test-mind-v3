@@ -4,56 +4,71 @@
 @media only screen and (max-width: 767px) {
     #mindmap-container {
         width: 100vw;
-        height: 80vh; /* Adjusted height for mobile */
-        padding: 10px; /* Add some padding to prevent overflow */
+        height: 90vh; /* Slightly taller to fit content */
+        padding: 5px; /* Reduce padding for better fit */
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
     #group-name-container {
-        margin-bottom: 20px; /* Reduce bottom margin */
-        margin-top: 10px; /* Reduce top margin */
+        margin-bottom: 15px; /* Reduce bottom margin */
+        margin-top: 5px; /* Reduce top margin */
     }
 
     #group-name-input {
-        width: 80%;
-        height: 2rem;
-        font-size: 1rem; /* Adjust font size for readability */
+        width: 70%; /* Slightly smaller width for mobile */
+        height: 1.8rem; /* Reduce height to match scale */
+        font-size: 0.9rem; /* Adjust font size */
     }
 
     #central-node {
-        width: 200px; /* Slightly smaller on mobile */
-        min-height: 120px;
-        margin-bottom: 10px; /* Reduce space below node */
+        width: 160px; /* Reduce size for mobile */
+        min-height: 100px;
+        margin-bottom: 5px; /* Reduce space below node */
+        padding: 10px; /* Reduce padding inside the node */
+        font-size: 0.9rem; /* Adjust text size inside the node */
     }
 
     .add-btn {
-        width: 30px; /* Smaller size for mobile */
-        height: 30px;
-        font-size: 1rem; /* Adjusted for readability */
+        width: 25px; /* Smaller size for mobile */
+        height: 25px;
+        font-size: 1.2rem; /* Adjusted for readability */
     }
 
     /* Adjust positioning of the plus buttons */
     #add-below-btn {
-        bottom: -25px; /* Bring closer to the node */
+        bottom: -20px; /* Bring closer to the node */
         left: 50%;
         transform: translateX(-50%);
     }
 
     #add-left-btn {
-        left: -35px; /* Bring closer to the node */
+        left: -30px; /* Bring closer to the node */
         top: 50%;
         transform: translateY(-50%);
     }
 
     #add-right-btn {
-        right: -35px; /* Bring closer to the node */
+        right: -30px; /* Bring closer to the node */
         top: 50%;
         transform: translateY(-50%);
     }
 
     #reset-button {
-        margin-top: 20px; /* Reduce spacing to match other elements */
+        margin-top: 15px; /* Reduce spacing to match other elements */
+        padding: 8px 16px; /* Adjust padding for smaller size */
+        font-size: 0.9rem; /* Adjust font size */
+    }
+
+    #popup-menu button {
+        width: 70px; /* Smaller buttons */
+        height: 22px;
+        font-size: 11px; /* Smaller font */
+        background-color: #000000; /* Ensure buttons are visible */
+    }
+
+    textarea {
+        font-size: 0.8rem; /* Smaller font size for mobile */
     }
 }

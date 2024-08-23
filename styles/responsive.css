@@ -6,19 +6,26 @@
         width: 100vw;
         height: 80vh; /* Adjusted height for mobile */
         padding: 10px; /* Add some padding to prevent overflow */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #group-name-container {
+        margin-bottom: 20px; /* Reduce bottom margin */
+        margin-top: 10px; /* Reduce top margin */
     }
 
     #group-name-input {
         width: 80%;
         height: 2rem;
-        font-size: 1rem; /* Reduce font size */
+        font-size: 1rem; /* Adjust font size for readability */
     }
 
-    #popup-menu button {
-        width: 80px;
-        height: 25px;
-        font-size: 12px;
-        background-color: #000000; /* Ensure buttons are visible */
+    #central-node {
+        width: 200px; /* Slightly smaller on mobile */
+        min-height: 120px;
+        margin-bottom: 10px; /* Reduce space below node */
     }
 
     .add-btn {
@@ -27,26 +34,26 @@
         font-size: 1rem; /* Adjusted for readability */
     }
 
-    textarea {
-        font-size: 0.9rem; /* Smaller font size for mobile */
-    }
-
     /* Adjust positioning of the plus buttons */
     #add-below-btn {
-        bottom: -40px;
+        bottom: -25px; /* Bring closer to the node */
         left: 50%;
         transform: translateX(-50%);
     }
 
     #add-left-btn {
-        left: -50px;
+        left: -35px; /* Bring closer to the node */
         top: 50%;
         transform: translateY(-50%);
     }
 
     #add-right-btn {
-        right: -50px;
+        right: -35px; /* Bring closer to the node */
         top: 50%;
         transform: translateY(-50%);
+    }
+
+    #reset-button {
+        margin-top: 20px; /* Reduce spacing to match other elements */
     }
 }

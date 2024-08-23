@@ -1,11 +1,8 @@
 // scripts/mindmap.js
 
 const mindmapContainer = document.getElementById('mindmap-container');
-const addBelowButton = document.getElementById('add-below-btn');
-const addLeftButton = document.getElementById('add-left-btn');
-const addRightButton = document.getElementById('add-right-btn');
+const centralNode = document.getElementById('central-node');
 const resetButton = document.getElementById('reset-button');
-let currentColor = '#40FE5E';
 
 // Function to create a new node and apply the current color
 function createNode(parentNode, position, button) {
@@ -232,23 +229,15 @@ function connectNodes(parentNode, childNode) {
 }
 
 // Event listeners for plus buttons
-addBelowButton.addEventListener('click', function() {
-    createNode(document.getElementById('central-node'), 'below', this);
-});
+function addInitialPlusButtons() {
+    addPlusButtons(centralNode, null);
+}
 
-addLeftButton.addEventListener('click', function() {
-    createNode(document.getElementById('central-node'), 'left', this);
-});
+addInitialPlusButtons();
 
-addRightButton.addEventListener('click', function() {
-    createNode(document.getElementById('central-node'), 'right', this);
-});
-
-// Event listener for the reset button
 resetButton.addEventListener('click', function() {
     document.querySelectorAll('.node:not(#central-node), .connection-line').forEach(element => element.remove());
 
-    const centralNode = document.getElementById('central-node');
     centralNode.querySelector('textarea').value = '';
 
     centralNode.querySelectorAll('.add-btn').forEach(button => button.remove());

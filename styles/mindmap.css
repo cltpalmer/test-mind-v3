@@ -49,24 +49,26 @@ textarea {
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+/* Center the plus button below the node */
 #add-below-btn {
     position: absolute;
-    bottom: -50px; /* Adjusted to be further below the node */
+    bottom: -30px; /* Adjust this value as needed */
     left: 50%;
     transform: translateX(-50%);
     box-shadow: 0 0 10px #40FE5E;
 }
 
+/* Position the plus buttons to the left and right */
 #add-left-btn {
     position: absolute;
-    left: -50px; /* Adjusted to be further to the left */
+    left: -50px; /* Adjust this value as needed */
     top: 50%;
     transform: translateY(-50%);
 }
 
 #add-right-btn {
     position: absolute;
-    right: -50px; /* Adjusted to be further to the right */
+    right: -50px; /* Adjust this value as needed */
     top: 50%;
     transform: translateY(-50%);
 }

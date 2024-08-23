@@ -1,5 +1,8 @@
 // scripts/menu.js
 
+// Declare currentColor only here
+let currentColor = '#40FE5E';
+
 // Get DOM elements
 const colorMenuTrigger = document.getElementById('color-menu-trigger');
 const colorMenu = document.getElementById('color-menu');
@@ -7,7 +10,6 @@ const popupMenu = document.getElementById('popup-menu');
 const changeColorBtn = document.getElementById('change-color-btn');
 const closeMenuBtn = document.getElementById('close-menu-btn');
 const colorSwatches = document.querySelectorAll('.color-swatch');
-let currentColor = '#40FE5E';
 
 // Ensure the pop-up menu and color menu are hidden on page load
 popupMenu.style.display = 'none';
@@ -104,7 +106,7 @@ function updateAddButtonsMargins() {
     const addButtons = document.querySelectorAll('.add-btn');
 
     // Calculate the dynamic margin based on the central node's width
-    const marginValue = Math.max(centralNode.offsetWidth * 0.1, 10); // Minimum 10px margin
+    const marginValue = Math.max(centralNode.offsetWidth * 0.05, 5); // Smaller margin for mobile
 
     // Apply the calculated margin
     addButtons.forEach(button => {

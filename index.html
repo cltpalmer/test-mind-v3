@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensure responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dynamic Mind Map</title>
     <!-- Link to CSS files -->
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/mindmap.css">
     <link rel="stylesheet" href="styles/menu.css">
-    <link rel="stylesheet" href="styles/responsive.css"> <!-- New responsive CSS -->
+    <link rel="stylesheet" href="styles/mindmap.css">
+    <link rel="stylesheet" href="styles/responsive.css">
 </head>
 <body>
     <div id="mindmap-container">
@@ -52,8 +52,9 @@
         <button id="reset-button" class="reset-btn">Create New Node Group</button>
     </div>
 
-    <!-- Link to JavaScript files -->
-    <script src="scripts/mindmap.js"></script>
+    <!-- Load menu.js first -->
     <script src="scripts/menu.js"></script>
+    <!-- Then load mindmap.js -->
+    <script src="scripts/mindmap.js"></script>
 </body>
 </html>

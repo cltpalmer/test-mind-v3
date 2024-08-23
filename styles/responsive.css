@@ -23,30 +23,30 @@
         padding: 10px;
         margin-bottom: 15px;
         font-size: 0.9rem;
+        position: relative;
     }
 
     .add-btn {
         width: 30px;
         height: 30px;
         font-size: 1.5rem;
-        /* Ensure there's a margin around the node */
-        margin: 10px; /* This margin will create space between the plus buttons and the node */
+        margin: 5px;
     }
 
     #add-below-btn {
-        bottom: -40px; /* Ensures the button is not overlapping */
+        bottom: -30px; /* Centered below */
         left: 50%;
         transform: translateX(-50%);
     }
 
     #add-left-btn {
-        left: -45px; /* Ensures the button is not overlapping */
+        left: -40px; /* Adjusted for mobile */
         top: 50%;
         transform: translateY(-50%);
     }
 
     #add-right-btn {
-        right: -45px; /* Ensures the button is not overlapping */
+        right: -40px; /* Adjusted for mobile */
         top: 50%;
         transform: translateY(-50%);
     }
